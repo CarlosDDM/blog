@@ -7,8 +7,5 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - sqlite:/app/db.sqlite3
-    command: ["sh", "-c", "npm run migrate && npm rum build && npm start"]
-volumes:
-  sqlite:
-    driver: local
+      - ./data:/app/db.sqlite3
+    command: ["sh", "-c", "npm run migrate && npm start"]
