@@ -26,4 +26,12 @@ COPY --from=builder /app/public ./public
 
 COPY --from=builder /app/src/db ./src/db
 
+COPY --from=builder /app/drizzle.config.js ./
+
+COPY --from=builder /app/next.config.ts ./
+
+COPY --from=builder /app/tsconfig.json ./
+
+COPY --from=builder /app/postcss.config.mjs ./
+
 EXPOSE 3000
