@@ -3,6 +3,7 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
+  output: 'standalone',
   images: {
     /*O next reclama de acessar um servidor de imagem
     local então deve usar essa opção para ignorar*/

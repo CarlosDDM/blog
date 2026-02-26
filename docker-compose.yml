@@ -8,6 +8,7 @@ services:
       - "3000:3000"
     volumes:
       - sqlite:/app/db.sqlite3
+    command: sh -c "node src/db/drizzle/migrate.js && node server.js"
 volumes:
   sqlite:
     driver: local
