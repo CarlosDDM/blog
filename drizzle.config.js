@@ -4,6 +4,6 @@ export default defineConfig({
   schema: './src/db/drizzle/schemas.ts',
   dialect: 'sqlite',
   dbCredentials: {
-    url: './db.sqlite3',
+    url: './data/db.sqlite3',
   },
 });
