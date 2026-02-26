@@ -1,3 +1,4 @@
+'use client';
 import { formatDateToNow, formateDateTime } from '@/utils/format-datetime';
 import clsx from 'clsx';
 

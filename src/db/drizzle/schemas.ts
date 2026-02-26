@@ -16,3 +16,15 @@ export const postsTable = sqliteTable('posts', {
 
 export type PostsTableSelectMode = InferSelectModel<typeof postsTable>;
 export type PostsTableInsertMode = InferInsertModel<typeof postsTable>;
+
+export const usersTable = sqliteTable('users', {
+  id: text('id').primaryKey(),
+  email: text('email').notNull().unique(),
+  username: text('username').notNull().unique(),
+  password: text('password').notNull(),
+  createdAt: text('created_at').notNull(),
+  updatedAt: text('updated_at').notNull(),
+});
+
+export type UsersTableSelectMode = InferSelectModel<typeof usersTable>;
+export type UsersTableInsertMode = InferInsertModel<typeof usersTable>;

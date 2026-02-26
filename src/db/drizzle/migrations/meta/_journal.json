@@ -8,6 +8,20 @@
       "when": 1769119690992,
       "tag": "0000_tearful_rogue",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1771019097193,
+      "tag": "0001_lovely_tiger_shark",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1771019548438,
+      "tag": "0002_romantic_prima",
+      "breakpoints": true
     }
   ]
 }
