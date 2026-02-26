@@ -24,7 +24,7 @@ COPY --from=builder /app/.next/static ./.next/static
 
 COPY --from=builder /app/public ./public
 
-COPY --from=builder /app/src/db ./src/db
+COPY --from=builder /app/src ./src
 
 COPY --from=builder /app/drizzle.config.js ./
 

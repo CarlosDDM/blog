@@ -8,4 +8,9 @@ services:
       - "3000:3000"
     volumes:
       - ./data:/app/db.sqlite3
-    command: ["sh", "-c", "npm run migrate && npm start"]
+    command:
+      [
+        "sh",
+        "-c",
+        "mkdir -p /app/data && npm run migrate && npm run seed && node server.js",
+      ]
