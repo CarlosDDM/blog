@@ -35,6 +35,9 @@ import { drizzleDb } from '.';
     id: uuidV4().replaceAll('-', ''),
   };
   try {
+    const existUser = await drizzleDb.query.users.findMany();
+    if (existUser.length > 0) return;
+
     await postRepository.createUser(defaultUser);
   } catch (err) {
     throw new Error(`Usuário não criado: ${err}`);

@@ -1,0 +1,13 @@
+services:
+  the_blog:
+    container_name: the_blog
+    build: .
+    env_file:
+      - .env.local
+    ports:
+      - "3000:3000"
+    volumes:
+      - sqlite:/app/db.sqlite3
+volumes:
+  sqlite:
+    driver: local
